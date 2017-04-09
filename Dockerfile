@@ -31,7 +31,7 @@ RUN apt-get install -y \
 
 # Add current directory to /app
 COPY . /app
-COPY ./kindlegen /bin/
+VOLUME /usr/local/bin/kindlegen:/bin/kindlegen
 
 # Set current working directory as /app
 WORKDIR /app

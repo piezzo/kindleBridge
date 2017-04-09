@@ -1,13 +1,14 @@
 sudo: required
 
 services:
-    - docker
+  - docker
+branches:
+  only:
+    - master
 
 script:
-    - ./test-build.sh $NODE_VERSION
+  - docker build -t piezzo/kindlebridge:latest .
 
-env:
-    matrix :
-        - NODE_VERSION: '4.8'
-        - NODE_VERSION: '6.10'
-        - NODE_VERSION: '7.8'
+after_script:
+  - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+  - docker push piezzo/kindlebridge:latest
