@@ -1,0 +1,15 @@
+{
+  "Message-Id": "<20130503182626.18666.16540@kindlebridge.isnogood.de>",
+  "body-plain": "",
+  "domain": "kindlebridge.isnogood.de",
+  "event": "delivered",
+  "message-headers": "[[\"Received\", \"by luna.mailgun.net with SMTP mgrt 8734663311733; Fri, 03 May 2013 18:26:27 +0000\"], [\"Content-Type\", [\"multipart/alternative\", {\"boundary\": \"eb663d73ae0a4d6c9153cc0aec8b7520\"}]], [\"Mime-Version\", \"1.0\"], [\"Subject\", \"Test deliver webhook\"], [\"From\", \"Bob <bob@kindlebridge.isnogood.de>\"], [\"To\", \"Alice <alice@example.com>\"], [\"Message-Id\", \"<20130503182626.18666.16540@kindlebridge.isnogood.de>\"], [\"X-Mailgun-Variables\", \"{\\\"my_var_1\\\": \\\"Mailgun Variable #1\\\", \\\"my-var-2\\\": \\\"awesome\\\"}\"], [\"Date\", \"Fri, 03 May 2013 18:26:27 +0000\"], [\"Sender\", \"bob@kindlebridge.isnogood.de\"]]",
+  "my-var-2": "awesome",
+  "my_var_1": "Mailgun Variable #1",
+  "recipient": "alice@example.com",
+  "signature": "81ab6c73c9703b517aaee2e1cb052e0a0fdfd3f0a6494ca7a5f8dfb1e78a9cf7",
+  "timestamp": "1487149715",
+  "token": "4ea6b6156e32421c41883b5d10572cebd3e9c3d55cf2dc47f9"
+}
+
+domain=kindlebridge.isnogood.de&my_var_1=Mailgun+Variable+%231&my-var-2=awesome&message-headers=%5B%5B%22Received%22%2C+%22by+luna.mailgun.net+with+SMTP+mgrt+8734663311733%3B+Fri%2C+03+May+2013+18%3A26%3A27+%2B0000%22%5D%2C+%5B%22Content-Type%22%2C+%5B%22multipart%2Falternative%22%2C+%7B%22boundary%22%3A+%22eb663d73ae0a4d6c9153cc0aec8b7520%22%7D%5D%5D%2C+%5B%22Mime-Version%22%2C+%221.0%22%5D%2C+%5B%22Subject%22%2C+%22Test+deliver+webhook%22%5D%2C+%5B%22From%22%2C+%22Bob+%3Cbob%40kindlebridge.isnogood.de%3E%22%5D%2C+%5B%22To%22%2C+%22Alice+%3Calice%40example.com%3E%22%5D%2C+%5B%22Message-Id%22%2C+%22%3C20130503182626.18666.16540%40kindlebridge.isnogood.de%3E%22%5D%2C+%5B%22X-Mailgun-Variables%22%2C+%22%7B%5C%22my_var_1%5C%22%3A+%5C%22Mailgun+Variable+%231%5C%22%2C+%5C%22my-var-2%5C%22%3A+%5C%22awesome%5C%22%7D%22%5D%2C+%5B%22Date%22%2C+%22Fri%2C+03+May+2013+18%3A26%3A27+%2B0000%22%5D%2C+%5B%22Sender%22%2C+%22bob%40kindlebridge.isnogood.de%22%5D%5D&Message-Id=%3C20130503182626.18666.16540%40kindlebridge.isnogood.de%3E&recipient=alice%40example.com&event=delivered&timestamp=1487149715&token=4ea6b6156e32421c41883b5d10572cebd3e9c3d55cf2dc47f9&signature=81ab6c73c9703b517aaee2e1cb052e0a0fdfd3f0a6494ca7a5f8dfb1e78a9cf7&body-plain=

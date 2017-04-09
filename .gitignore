@@ -1,0 +1,42 @@
+#databases
+mongodb/
+
+#docker-compose overrides
+docker-compose.override.yml
+
+.DS_Store
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+.vscode/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+#Node JS environment files
+.env
+
+# node-waf configuration
+.lock-wscript
+
+# Compiled binary addons (http://nodejs.org/api/addons.html)
+build/Release
+
+# Dependency directories
+node_modules
+jspm_packages
+.node-gyp
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# kindlegen binary and tempfiles
+kindlegen

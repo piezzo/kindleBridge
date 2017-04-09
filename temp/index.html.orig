@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html class="mobile">
+<head lang="en">
+    <title>Log In - New York Times</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="sourceApp" content="myaccount">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/auth/auth.css">
+
+
+    <script type="text/javascript" defer src="https://typeface.nyt.com/sww2wyn.js"></script>
+    <script type="application/javascript" defer>var isMobile=true;</script>
+
+        <script src="/js/auth/build/page/regi-login.js"></script>
+    
+</head>
+<body>
+        <div id="container">
+        <div id="page">
+            <header class="clearfix">
+                <div class="container">
+                    <a href="https://www.nytimes.com" class="logo"><img src="/img/nyt-logo-379x64.svg" alt="New York Times" id="NYTLogo"></a>
+                                    </div>
+            </header>
+
+            
+
+
+<div class="formBox">
+    <div class="border signUpForm">
+
+        
+        
+                <h2>Log In</h2>
+        
+        <p class="row auth-link-text">Don't have an account? <a href="https://myaccount.nytimes.com/register?URI=https%3A%2F%2Fwww.nytimes.com%2Finteractive%2F2017%2F03%2F22%2Fus%2Fis-americas-military-big-enough.html&amp;OQ=Q5fQ72Q3dQ35" class="auth-link">Sign up here &raquo;</a></p>
+
+        
+                <div class="error row">
+            <div class="message">In order to access our Web site, your Web browser must accept cookies from NYTimes.com. <a href="https://www.nytimes.com/membercenter/faq/cookies.html" target="_blank">More information &raquo;</a></div>
+        </div>
+        
+        <form method="POST" novalidate>
+
+                        <div class="sso-buttons">
+    <div class="sso-button-container">
+        <a data-device="mobile" data-name="facebook" data-redirect="https://www.nytimes.com/interactive/2017/03/22/us/is-americas-military-big-enough.html?login=email&amp;_r=5" href="/oauth/facebook-link?&amp;type=login&amp;flow=DSLI&amp;URI=https://www.nytimes.com/interactive/2017/03/22/us/is-americas-military-big-enough.html&amp;OQ=Q5fQ72Q3dQ35" id="js-facebook-oauth-login" class="sso-button sso-button-facebook">
+            <span class="icon icon-oauth-facebook">
+                <span class="icon icon-oauth-facebook-hover"></span>
+            </span>
+            <span class="sso-button-login-text">Facebook</span>
+        </a>
+    </div>
+    <div class="sso-button-container">
+        <a data-device="mobile" data-name="google" data-redirect="https://www.nytimes.com/interactive/2017/03/22/us/is-americas-military-big-enough.html?login=email&amp;_r=5" href="/oauth/google-link?&amp;type=login&amp;flow=DSLI&amp;URI=https://www.nytimes.com/interactive/2017/03/22/us/is-americas-military-big-enough.html&amp;OQ=Q5fQ72Q3dQ35" id="js-google-oauth-login" class="sso-button sso-button-google">
+            <span class="icon icon-oauth-google"></span>
+            <span class="sso-button-login-text">Google</span>
+        </a>
+    </div>
+</div>
+
+<div class="oauth-separator-wrap">
+    <span class="oauth-separator-txt">or</span>
+</div>
+
+<script>if(typeof window.NYTD==='undefined'){window.NYTD={};}
+window.NYTD.success_redirect_url='https://www.nytimes.com/interactive/2017/03/22/us/is-americas-military-big-enough.html?login=email&amp;_r=5';</script>    
+<script type="text/javascript" src="/js/common/oauth/smartlock.js"></script>
+<script type="text/javascript" src="/js/common/oauth/login.js"></script>
+                        <input type="hidden" name="is_continue" value="false">
+            <input type="hidden" name="expires" value="1491741759">
+            <input type="hidden" name="token" value="178bedc58d18deb059f2a8e8e8861a0442e1bf46">
+
+            <input type="email" placeholder="Email Address" id="userid" class="input " name="userid" maxlength="64" value="" autocorrect="off" autocapitalize="off" spellcheck="false" autocomplete="username">
+                        <div class="passwordFieldContainer">
+                <input class="input password " placeholder="Password" type="password" id="password1" name="password" autocapitalize="off" autocomplete="current-password" maxlength="255" required>
+                <input class="input password " placeholder="Password" type="text" id="password-text" name="password_text" autocapitalize="off" autocomplete="off" maxlength="255" required>
+                <span class="password-toggle-visibility"><span></span></span>
+            </div>
+                        <div class="error-message auto-sign-in-error hidden"></div>
+                        <div class="row clearfix auth-form-links">
+                <label for="remember-me" class="pull-left"><input type="checkbox" name="remember" value="true" checked="checked" id="remember-me"> Remember Me</label>
+                <a href="/seg/forgot-password?EXIT_URI=https%3A%2F%2Fwww.nytimes.com%2Finteractive%2F2017%2F03%2F22%2Fus%2Fis-americas-military-big-enough.html%3F%3D%26_r%3D5" class="pull-right forgot-link">Forgot password?</a>
+            </div>
+
+            <div class="row center buttons">
+                <button id="submit" class="button primary auth-button" type="submit"><span>Log In</span></button>
+            </div>
+
+        </form>
+        
+        
+            </div>
+</div>
+
+
+            <footer>
+                <a href="http://www.nytimes.com/content/help/rights/copyright/copyright-notice.html">&copy; 2017 The New York Times Company</a>
+                <ul>
+                    <li><a href="http://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+                    <li><a href="http://www.nytimes.com/help/index.html">Feedback</a></li>
+                </ul>
+            </footer>
+        </div>
+    </div>
+        <script src="https://a1.nyt.com/analytics/tagx-simple.min.js" type="text/javascript" defer></script>
+</body>
+</html>

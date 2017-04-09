@@ -1,0 +1,78 @@
+extends layout
+
+block content
+  h1= title
+  p
+    i(class='fa fa-cloud-upload' style='font-size:60px; padding-left:.2em;')
+  p A tool for pushing blog posts or news articles to eBook readers conveniently.
+  
+  if history && history.length >0
+    h3 History
+    p most recent events (last hour only; you need to reload to refresh the page).
+    pre  
+      table
+        thead
+          td messageId 
+          td date 
+          td event 
+        tbody
+          each row in history
+            tr 
+              td #{row.messageId} 
+              td #{row.date} 
+              td #{row.event} 
+              
+    //p !{JSON.stringify(history)}
+  else 
+    h3 Problem
+    p Suppose you see a nice article on facebook/twitter/reddit but would rather read the article on your eBook reader.
+
+    h3 Solution
+    p Turns out: You can actually send the article to your eBook reader via plain old email to [your_kindle's_email's_local_part]@free.kindle.com. This site provides a wrapper that basically takes a url or tinyurl as input,sets a viewport, renders the link's content to pdf and forwards it to the eBook reader. Fortunately, most share-options in mobile applications still provide the option to share content via email.
+
+    ul
+      li share the link in an email-body to 
+        strong 
+        i pick_a_name_for_the_device
+        |@kindleBridge.isnogood.de
+      li Initially, he result is being sent back to you. You can then forward that email to your destination-address (still manageable on a smartphone).
+      li You can have the result pushed to the eReader directly (protected by a shared secret). Information on how to do this in contained in the email.
+    //- ul
+    //-   li Allow new content being added by email from this exact email address: 
+    //-     strong me@#{config.domain}
+    //-   li Send an email containing a link or tinyurl to: 
+    //-     strong [your_kindle's_email's_local_part]@#{config.domain}
+        
+    p You can somewhat influence the application by inserting keywords (including the dot) anywhere into the Subject:-line of the email along with the real Subject defining the filename and title of the Document on the eBook reader:
+    ul
+      li
+        strong
+          |.pdf 
+        | - result will be in pdf fromat (this is also the default)
+      li
+        strong
+          |.mobi 
+        | - result will be in mobi fromat (Kindle eBook reader format. This is highly experimental. There will be no grahics along with terrible layout - but works surprisingly good with medium.com)
+      li
+        strong
+          |.cc 
+        | - put the sender-address into CC: of the email sent to Amazon's service (so you get a copy of the generated file).
+        
+
+    p The content should arrive at the email address you are using (plan for ~3 minutes).
+    
+    p
+      strong
+        i When using this tool, please keep in mind that content on the internet is usually protected by strong legal terms. If unsure, do not use this tool on that content. There is always a free or less-restrictively licensed alternative which is just as good. Use the latter one. 
+
+    h3 Disclaimer
+    ul
+      li This software is a leasure-time-project and not meant to be perfect. Enjoy it as long as it runs.
+      li Although I try to minimize data collection myself, it is noteworthy that 3rd-party services such as mailgun and of cause amazon are used to make this software work. Both deliver great services but might collect data on their side.
+      li Say hello at  
+        a(href='mailto:' + config.contact) #{config.contact}
+
+
+  div.gitLog.generated(style={'font-size':'x-small',color:'orange'})
+    p Version: #{gitLog.hash + ': ' + gitLog.message + ' on ' + gitLog.branch + (gitLog.dirty ? '*' : '' )}
+      

@@ -1,0 +1,34 @@
+extends layout
+
+block content
+  h1 !{title} :: history
+  p
+    i(class='fa fa-cloud-upload' style='font-size:60px; padding-left:.2em;')
+  p Section is meant for debug purposes. The final stage of the job should be "delivered" or "error".
+  
+  if history && history.length >0
+    h3 History
+    p most recent events (last hour only; you need to reload to refresh the page).
+    pre  
+      table
+        thead
+          td messageId 
+          td date 
+          td event 
+        tbody
+          each row in history
+            tr 
+              td #{row.messageId} 
+              td #{row.date} 
+              td #{row.event} 
+              
+    //p !{JSON.stringify(history)}
+  else
+    ul
+      li nothig happend within the last hour.
+  
+  div.gitLog.generated(style={'font-size':'x-small',color:'orange'})
+    p Version: #{gitLog.hash + ': ' + gitLog.message + ' on ' + gitLog.branch + (gitLog.dirty ? '*' : '' )}
+  div.pull-right(style='font-size:30px; padding-left:2em;')
+    a(href='/')
+      i(class='fa fa-chevron-left') 

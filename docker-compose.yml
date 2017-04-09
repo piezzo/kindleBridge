@@ -1,0 +1,18 @@
+version: '2'
+services:
+  web:
+    environment:
+      - NODE_ENV=development
+    build: .
+    ports:
+      - "3000:3000"
+    # volumes:
+    #   - .:/app
+    # depends_on:
+      # - mongo
+  # mongo:
+  #   image: mongo
+  #   logging:
+  #     driver: "none"
+  #   volumes:
+  #     - ./mongodb/data:/data/db
