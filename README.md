@@ -1,22 +1,20 @@
 # kindleBridge
 
-An online version is [available here](http://isnogoood.de:8080/)
-=====================================
+An online version is available at [http://isnogoood.de:8080/](http://isnogoood.de:8080/)
 
-What is this?
--------------
+[![Build Status](https://travis-ci.org/piezzo/kindleBridge.svg?branch=master)](https://travis-ci.org/piezzo/kindleBridge.svg?branch=master)
+
+## What is this?
 
 kindleBridge is a docker/nodejs based service to convert URLs reveived in an email into an eBook reader-friendly format (and optionally forward it to the eBook reader, again, by email).
 
-Features
---------
+## Features
 
 * output can be pdf or mobi (mobi needs an external binary in the programs root folder)
 * basic feedback about results on webpage
 * interaction with the program is usually a single email
 
-Requirements
-------------
+## Requirements
 
 To dispatch the service as is, you would need
 
@@ -30,9 +28,8 @@ In it's default configuration, the program expects the following variables confi
 * MAILGUN_API_KEY (account for sending and receiving emails)
 * EMAIL_DOMAIN (the domain)
 * CONTACT_EMAILADDR (your email)
-* SEED (some random string)
+* SEED (some random string for deterministic crypto)
 
-License
--------
+## License
 
 This project is released under the terms of the MIT license. See [LICENSE](LICENSE) for more information.
